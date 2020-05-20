@@ -35,7 +35,34 @@ The following configurations must be made for this project:
 <img src="images/HWsetup.png" alt="Hardware Setup" width="480"/>
 
 ## Operation:
-Run the code with a debugger, put a breakpoint in the interrupt function, turn the potentiometer quickly to trigger the interrupt and check the value of the variable to see the result. 
+1. Connect the board to the PC.
+
+2. Open the *pic18f47q10-cnano-adcc-spike-trigger-mcc.X* project in MPLAB® X IDE.
+
+3. Set *pic18f47q10-cnano-adcc-spike-trigger-mcc* project as main project. Right click on the project in the *Projects* tab and click *Set as Main Project*:
+<br><img src="images/main.PNG" width="600">
+
+4. Select the *PIC18F47Q10 Curiosity Nano* in the *Hardware Tool* section of the project settings:
+  - Right click on the project and click *Properties*;
+  - Select the *PIC18F47Q10 Curiosity Nano* (click on the SN) in the *Hardware Tool* tab and then click *OK*:
+<br><img src="images/prop.PNG" width="600">
+
+
+5. Run the code in debug mode: right click on the project and click *Debug*:
+<br><img src="images/debug.PNG" width="600">
+
+
+6. Put a breakpoint inside the ThresholdISR() function by clicking the line number. 
+<br><img src="images/break.PNG" width="600">
+
+7. Turn the potentiometer as quickly as possible. The code will stop at the breakpoint.
+
+8. Add *errVal* variable to the *Variables window*: right click on the `errVal` variable in main.c file and click *New Watch*:
+<br><img src="images/watch.PNG" width="600">
+
+The ADC runs continuously until a sharp increase or decrease is registered. When this happens the interrupt is triggered and the value of the spike can be observed.
+
+<br><img src="images/var.PNG" width="600">
 
 ## Summary
 This project showcases how the Analog-to-Digital Converter with Computation (ADCC) on the new PIC18-Q10 can be used to monitor a signal for voltage spikes.
