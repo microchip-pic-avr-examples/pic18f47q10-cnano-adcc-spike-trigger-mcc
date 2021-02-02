@@ -4,7 +4,7 @@
     "content": {
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.mplabx.project.pic18f47q10-cnano-adcc-spike-trigger-mcc",
-        "version": "1.0.3",
+        "version": "1.0.4",
         "displayName": "ADCC Voltage Spike Detection Configuration",
         "projectName": "pic18f47q10-cnano-adcc-spike-trigger-mcc",
         "shortDescription": "In this demo, the ADCC peripheral is used to read a value continuously from an analog pin connected to a potentiometer and when a voltage spike is detected, an interrupt that reads the error is triggered. The drivers for peripherals were generated using MCC.",
@@ -38,18 +38,16 @@
         },
         "author": "Microchip",
         "subcategories": [
-            "Peripherals",
             [
-               "Peripherals", "ADCC"
+               "Peripherals",
+			   "ADCC"
             ]       			
         ],
         "peripherals": [
             "ADCC"
         ],
         "keywords": [
-            "Voltage Spike",
-            "Trigger",
-            "Continuous"	
+            "Voltage Spike"	
         ],
 		"additionalData": {
 			"longDescription": {
